@@ -3,8 +3,8 @@
  * The Sidebar containing the Homepage widget area.
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 ?>
 
@@ -15,7 +15,7 @@
 		<div class="row">
 			<div class="span4">
 				<li class="widget-container widget-text">
-					<h2 class="widget-title">Latest Sermon</h2>
+					<h2 class="widget-title">Últimas predicaciones</h2>
 					<div class-"textwidget">
 						<?php // Get the latest sermon post 
 						query_posts( 'post_type=sermons&showposts=1');

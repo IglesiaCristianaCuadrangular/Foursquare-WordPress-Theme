@@ -8,8 +8,8 @@
  * different template.
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 
 get_header(); ?>

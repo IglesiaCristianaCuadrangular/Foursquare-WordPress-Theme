@@ -3,14 +3,14 @@
  * The Sidebar for all subpages.
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 ?>
             
 <aside id="sidebar-sermon" class="sermon span4">
 	<div class="widget-container">
-		<h2>About This Series</h2>
+		<h2>Acerca de esta serie</h2>
 		<?php 
 			$reating_terms = get_the_terms ($post->id, 'series');
     		foreach ($reating_terms as $term){
@@ -20,7 +20,7 @@
 	</div><!--end widget-container-->  
 	
 	<div class="widget-container">
-	<h2>Latest Sermons</h2>
+	<h2>Últimas predicaciones</h2>
 		<?php
 		$args = array( 'post_type' => 'sermons', 'posts_per_page' => 3 );
 		$loop = new WP_Query( $args );

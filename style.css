@@ -1,5 +1,5 @@
 /*
-Theme Name: Foursquare Two
+Theme Name: IglesiaCuadrangular
 Theme URI: http://foursquare.org
 Description: A custom Wordpress theme for local Foursquare churches.
 Version: 1.0
@@ -9,4 +9,72 @@ Tags: clean, responsive, bootstrap, custom-options
 */
 
 @import "assets/styles/foursquare.css";
+div.basico{
+	background: url(./assets/images/logo.gif) no-repeat;
+		
+}
+p.copyrights {
+	margin: 0px 0 0 60px;
+}
+p.devs {
+	margin: 0px;
+	width: 100%;
+}
+div.fiscal{
+	float: right;
+}
+div.fiscal td{
+	text-align: right;		
+}
+.devlinks{
+}
+.devlinks ul{
+	list-style: none;
+	margin: 2px;
+	padding: 0px;
+}
+.devlinks ul li{
+	margin: 0px;
+	padding: 0px;
+}
+.devlinks ul li a:hover{
+	text-decoration: underline;
+}
+.portales ol li a{
+	display:block;
+	padding: 5px;
+}
 
+img.bbm {
+	border: 8px solid #ffffff;
+	-webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	margin: 2px;
+	width: 100px;
+}
+.ant {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	vertical-align: text-top;
+	background-image: url(./assets/images/smallant.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+p.devs {
+	margin: 0px;
+}
+.icon-admin-set{
+	float: right;
+}
+select#red {
+	width: 300px;
+}
+.fb-like-box, .fb-like-box iframe[style], .fb-comments span {
+	width: 100% !important; 
+}

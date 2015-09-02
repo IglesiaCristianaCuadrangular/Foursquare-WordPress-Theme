@@ -3,8 +3,8 @@
  * The Template for displaying all single posts.
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 
 get_header(); ?>
@@ -51,6 +51,8 @@ get_header(); ?>
 				<?php endif; ?>
 			</div><!--end bottom-nav-->
 		<?php endwhile; // end of the loop. ?>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-via="Unanimes" data-lang="es">Twittear</a>
+		<div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="button_count"></div>
 	</section><!--end blog-->
 
 <?php include ('sidebar-blog.php'); ?>

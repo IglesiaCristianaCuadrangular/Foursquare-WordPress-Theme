@@ -14,8 +14,8 @@
  * <code>get_template_part( 'loop', 'index' );</code>
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 ?>
 
@@ -100,7 +100,7 @@
 	<?php else : ?>
 			<h1><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
             <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) { the_post_thumbnail(array(200,160), array("class" => "alignleft post_thumbnail")); } ?>
-			<p class="meta"><?php twentyten_posted_on(); ?></p>
+			<p class="meta"><?php //twentyten_posted_on(); ?></p>
 
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
 			<?php the_excerpt(); ?>

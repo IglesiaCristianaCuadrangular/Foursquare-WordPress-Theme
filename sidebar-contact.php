@@ -6,14 +6,14 @@
  * have another way to directly get in touh with any staff member.
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 ?>
 
 <aside id="sidebar" class="contact span4">
 	<div class="widget-container">
-	<h2>Meet Our Staff</h2>
+	<h2>Conoce nuestro equipo</h2>
 	<?php
 	// The Query for Staff custom post type
 	$args = array( 'post_type' => 'staff' );

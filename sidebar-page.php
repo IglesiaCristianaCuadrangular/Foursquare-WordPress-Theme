@@ -3,8 +3,8 @@
  * The Sidebar for all subpages.
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 ?>
             
@@ -18,7 +18,7 @@
 	 */
 	if ( ! dynamic_sidebar( 'subpage-widget-area' ) ) : ?>
 		<li>
-            <h3 id="searchhead">Search For</h3>
+            <h3 id="searchhead">Buscar por</h3>
 			<?php get_search_form(); ?>
 		</li>
 <?php endif; // end subpage widget area ?>

@@ -3,8 +3,8 @@
  * The template for displaying Search Results pages.
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 
 get_header(); ?>
@@ -50,9 +50,9 @@ get_header(); ?>
 	<?php wp_reset_query(); ?>
 	
 	<?php else : ?>
-		<h2><?php _e( 'No Results for: ', 'twentyten' ); ?> &nbsp;<?php the_search_query(); ?> </h2>
+		<h2><?php _e( 'No hay resultados para: ', 'twentyten' ); ?> &nbsp;<?php the_search_query(); ?> </h2>
 		<hr />
-		<p><?php _e( 'Sorry, but nothing matched your search criteria. Perhaps searching again with different keywords will do the trick.', 'twentyten' ); ?></p>
+		<p><?php _e( 'lo sentimos, pero no encontramos nada relacionado con lo que estás buscando. inténtalo nuevamente con una frase diferente.', 'twentyten' ); ?></p>
 		<hr />
 		<?php get_search_form(); ?>
 	<?php endif; ?>

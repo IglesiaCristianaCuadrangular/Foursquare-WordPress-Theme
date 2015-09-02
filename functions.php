@@ -8,8 +8,8 @@
  *
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  *
  * Last Updated: February 22, 2012
  ------------------------------------------------------------------------------------------------ */
@@ -25,6 +25,9 @@ require_once('assets/functions/custom-post-types.php');
 require_once('assets/functions/shortcodes.php');
 require_once('assets/functions/breadcrumbs.php');
 require_once('assets/functions/class-tgm-plugin-activation.php');
+
+remove_action( 'load-update-core.php', 'wp_update_plugins' );
+add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )
@@ -168,7 +171,7 @@ function my_theme_register_required_plugins() {
 
 		// Plugins that are pre-packaged with a theme
 		array(
-			'name'     				=> 'Hero Content Slider', // The plugin name
+			'name'     				=> 'Cartelera informativa', // The plugin name
 			'slug'     				=> 'flexslider', // The plugin slug (typically the folder name)
 			'source'   				=> get_stylesheet_directory() . '/assets/plugins/flexslider.zip', // The plugin source
 			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
@@ -178,17 +181,17 @@ function my_theme_register_required_plugins() {
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		),
 		array(
-			'name'     				=> 'The Events Calendar', // The plugin name
+			'name'     				=> 'calendario de eventos', // The plugin name
 			'slug'     				=> 'the-events-calendar', // The plugin slug (typically the folder name)
 			'source'   				=> get_stylesheet_directory() . '/assets/plugins/the-events-calendar.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+			'force_activation' 		=> true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		),
 		array(
-			'name'     				=> 'Foursquare Twitter Widget', // The plugin name
+			'name'     				=> 'Cuenta de twitter', // The plugin name
 			'slug'     				=> 'fs-twitter-widget', // The plugin slug (typically the folder name)
 			'source'   				=> get_stylesheet_directory() . '/assets/plugins/fs-twitter-widget.zip', // The plugin source
 			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
@@ -198,7 +201,7 @@ function my_theme_register_required_plugins() {
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		),
 		array(
-			'name'     				=> 'Contact Form 7',
+			'name'     				=> 'Formulario de contacto',
 			'slug'     				=> 'contact-form-7', 
 			'source'   				=> get_stylesheet_directory() . '/assets/plugins/contact-form-7.zip', 
 			'required' 				=> true, 
@@ -208,7 +211,7 @@ function my_theme_register_required_plugins() {
 			'external_url' 			=> '', 
 		),
 		array(
-			'name'     				=> 'WordPress Gzip Compression',
+			'name'     				=> 'Compresión Gzip',
 			'slug'     				=> 'wordpress-gzip-compression', 
 			'source'   				=> get_stylesheet_directory() . '/assets/plugins/wordpress-gzip-compression', 
 			'required' 				=> true, 

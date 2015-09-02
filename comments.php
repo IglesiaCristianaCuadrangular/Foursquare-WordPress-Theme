@@ -8,12 +8,12 @@
  * located in the functions.php file.
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 ?>
-
 <article id="comments" class="span7">
+	<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="10" data-width="100%" data-colorscheme="light"></div>
 	<?php if ( post_password_required() ) : ?>
 		<p><?php _e( 'This post is password protected. Enter the password to view any comments.', 'twentyten' ); ?></p>
 	<?php
@@ -31,14 +31,14 @@
 	<div id="comments-title">
     	<h3 id="comments-title">
     	<?php
-		printf( _n( 'One Response to %2$s', '%1$s Comments on "%2$s"', get_comments_number(), 'twentyten' ),
+		printf( _n( 'One Response to %2$s', '%1$s Comments on "%2$s"', get_comments_number() ),
 		number_format_i18n( get_comments_number() ), '' . get_the_title() . '' );
 		?></h3>
 	</div>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to 	navigate through? ?>
-		<?php previous_comments_link( __( '&larr; Older Comments', 'twentyten' ) ); ?>
-		<?php next_comments_link( __( 'Newer Comments &rarr;', 'twentyten' ) ); ?>
+		<?php previous_comments_link( __( '&larr; Older Comments' ) ); ?>
+		<?php next_comments_link( __( 'Newer Comments &rarr;' ) ); ?>
 	<?php endif; // check for comment navigation ?>
 		<ul>
 			<?php
@@ -48,13 +48,13 @@
 			 * define twentyten_comment() and that will be used instead.
 			 * See twentyten_comment() in twentyten/functions.php for more.
 			*/
-			wp_list_comments( array( 'callback' => 'twentyten_comment' ) );
+			wp_list_comments(  );
 			?>
 		</ul>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<?php previous_comments_link( __( '&larr; Older Comments', 'twentyten' ) ); ?>
-			<?php next_comments_link( __( 'Newer Comments &rarr;', 'twentyten' ) ); ?>
+			<?php previous_comments_link( __( '&larr; Older Comments' ) ); ?>
+			<?php next_comments_link( __( 'Newer Comments &rarr;' ) ); ?>
 		<?php endif; // check for comment navigation ?>
 
 	<?php else : // or, if we don't have comments:
@@ -64,24 +64,24 @@
 	 */
 	if ( ! comments_open() ) :
 	?>
-		<p><?php _e( 'Comments are closed.', 'twentyten' ); ?></p>
+		<p><?php _e( 'Comments are closed.' ); ?></p>
 	<?php endif; // end ! comments_open() ?>
 
 	<?php endif; // end have_comments() ?>
 
 <?php $comment_args = array( 'fields' => apply_filters( 'comment_form_default_fields', array(
     'author' => '<p class="comment-form-author">' .
-    			'<label for="author">' . __( 'Your Name' ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label> ' .
+    			'<label for="author">' . __( 'Nombre' ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label> ' .
                 '<input id="author" name="author" type="text" value="' .
                 esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' .
                 '</p><!-- #form-section-author .form-section -->',
     'email'  => '<p class="comment-form-email">' .
-    			'<label for="email">' . __( 'Your Email' ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label> ' .
+    			'<label for="email">' . __( 'Email' ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label> ' .
                 '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' .
 		'</p><!-- #form-section-email .form-section -->',
     'url'    => '' ) ),
     'comment_field' => '<p class="comment-form-comment">' .
-    					'<label for="comment">' . __( 'Your Comment' ) . '</label>' .
+    					'<label for="comment">' . __( 'Comentario' ) . '</label>' .
                 		'<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>' .
                 		'</p><!-- #form-section-comment .form-section -->',
     'comment_notes_after' => '',

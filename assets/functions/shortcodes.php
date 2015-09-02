@@ -376,15 +376,15 @@ add_shortcode('icon', 'icons');
 /* -------------------------------------------------------------------------- */
 function fn_googleMaps($atts, $content = null) {
 	extract(shortcode_atts(array(
-	"width" => '380',
-	"height" => '185',
-	"src" => ''
+	"width" => '570',
+	"height" => '340',
+	"icon" => 'http://maps.google.com/mapfiles/kml/pal2/icon11.png',
+	"direccion" => 'Venezuela',
 	), $atts));
-	
-	return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'"></iframe>';
+	return '<img src="http://maps.googleapis.com/maps/api/staticmap?size='.$width.'x'.$height.'&maptype=roadmap&scale=2&markers=icon:'.$icon.'|996600%7C224+'.urlencode($direccion).'&sensor=false&key=AIzaSyAgph3t1TMT9e0nKh40RWKH_Fk991LBI5E" width="'.$width.'" height="'.$height.'" />';
 }
 
-add_shortcode("googlemap", "fn_googleMaps");
+add_shortcode("mapa_google", "fn_googleMaps");
 
 // YouTube
 /* -------------------------------------------------------------------------- */

@@ -3,8 +3,8 @@
  * Template Name: Full-Width Page
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  *
  * This file is a plain page template that utlizes the full body width. It's basically the same thing
  * as the Default Page template (page.php), minus the sidebar.

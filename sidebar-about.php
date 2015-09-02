@@ -3,14 +3,14 @@
  * The Sidebar for all subpages.
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 ?>
             
 <aside id="sidebar-about" class="about span4">
 	<div class="widget-container">
-	<h2>Meet Our Staff</h2>
+	<h2>Conoce nuestro equipo</h2>
 	<?php
 	// The Query for Staff custom post type
 	$args = array( 'post_type' => 'staff', 'hierarchical' => true, 'orderby' => 'menu_order', 'order' => 'ASC', 'showposts' => 5000 );

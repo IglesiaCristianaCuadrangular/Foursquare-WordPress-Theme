@@ -5,8 +5,8 @@
  * The template for display a staff member.
  *
  * @package WordPress
- * @subpackage Foursquare Two
- * @since Foursquare Two 1.0
+ * @subpackage IglesiaCuadrangular
+ * @since IglesiaCuadrangular 1.0
  */
 
 get_header(); ?>
@@ -80,7 +80,7 @@ get_header(); ?>
 				else {
  				 //do nothing or whatever you need when no custom field was found
 				} ?>
-				<h2>Summary</h2>
+				<h2>Resumen</h2>
 				<?php the_content(); ?>
 				<hr />
 				<?php // Get the topics
@@ -92,7 +92,7 @@ get_header(); ?>
 						$topics_names[] = $topics->name;
 						$topics = implode(", ", $topics_names);
 					?>
-				<h2>Topics</h2>
+				<h2>Temas</h2>
 				<p>
 					<?php
 						$terms_as_text = get_the_term_list( $post->ID, 'topics', '', ', ', '' ) ;
@@ -110,7 +110,7 @@ get_header(); ?>
 						$verses_names[] = $verses->name;
 						$verses = implode(", ", $verses_names);
 					?>
-				<h2>Bible References</h2>
+				<h2>Referencias Bíblicas</h2>
 				<p><?php echo $verses; ?></p>
 				<hr />
 				<?php endif; ?> 
@@ -120,15 +120,15 @@ get_header(); ?>
  					get_post_meta($post->ID, '_audio', true) ||
  					get_post_meta($post->ID, '_notes', true)
 	 			): ?>
-					<h2>Download Media</h2>
+					<h2>Descargar</h2>
 					<?php if ( get_post_meta($post->ID, "_video", true) ) { ?>
-						<i class="icon-film"></i> <a href="<?php echo get_post_meta($post->ID, "_video", true); ?>">Download Video</a><br />
+						<i class="icon-film"></i> <a href="<?php echo get_post_meta($post->ID, "_video", true); ?>">Descargar Video</a><br />
 					<?php } // End check for video file ?>
 					<?php if ( get_post_meta($post->ID, "_audio", true) ) { ?>
-						<i class="icon-music"></i> <a href="<?php echo get_post_meta($post->ID, "_audio", true); ?>">Download Audio</a><br />
+						<i class="icon-music"></i> <a href="<?php echo get_post_meta($post->ID, "_audio", true); ?>">Descargar Audio</a><br />
 					<?php } // End check for audio file ?>
 					<?php if ( get_post_meta($post->ID, "_notes", true) ) { ?>
-						<i class="icon-file"></i> <a href="<?php echo get_post_meta($post->ID, "_notes", true); ?>">Download Notes</a>
+						<i class="icon-file"></i> <a href="<?php echo get_post_meta($post->ID, "_notes", true); ?>">Descargar Notas</a>
 					<?php } // End check for audio file ?>
 					</ul>
 				<?php endif; ?>

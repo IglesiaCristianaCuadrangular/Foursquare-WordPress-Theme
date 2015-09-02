@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Foursquare Twp
- * @since Foursquare Two 1.0
+ * @since IglesiaCuadrangular 1.0
  */
 
 get_header(); ?>

@@ -11,7 +11,7 @@
 add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
 
-function my_show_extra_profile_fields( $user ) { ?>
+function my_show_extra_profile_fields( $user ) { /* ?>
 	<h3>Extra profile information</h3>
 	<table class="form-table"> 
         <tr>
@@ -49,7 +49,7 @@ function my_show_extra_profile_fields( $user ) { ?>
 			</td>
 		</tr>
 	</table>
-<?php }
+<?php */ }
 ?>
 <?php 
 
@@ -67,4 +67,5 @@ update_usermeta( $user_id, 'facebook', $_POST['facebook'] );
 update_usermeta( $user_id, 'googleplus', $_POST['googleplus'] );
 update_usermeta( $user_id, 'pinterest', $_POST['pinterest'] );
 }
+
 ?>
